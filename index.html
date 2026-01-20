@@ -24,7 +24,9 @@
     <button class="tab" data-model="models/model2.glb">Case Floor</button>
   </div>
 
-  <!-- Single Viewer -->
+  
+  <div id="content">
+
   <model-viewer
     id="viewer"
     src="models/model1.glb"
@@ -33,6 +35,14 @@
     shadow-intensity="1"
     background-color="#111">
   </model-viewer>
+
+  <iframe
+    id="pdf-viewer"
+    src=""
+    style="display:none;">
+  </iframe>
+
+</div>
 
   <script src="main.js"></script>
 </body>
