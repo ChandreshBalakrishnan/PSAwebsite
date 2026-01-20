@@ -40,12 +40,33 @@ const loader = new GLTFLoader();
 loader.load("models/model.glb", (gltf) => {
   const model = gltf.scene;
 
+  // Force visibility
+  model.traverse((child) => {
+    if (child.isMesh) {
+      child.material = new THREE.MeshStandardMaterial({
+        color: 0xcccccc,
+        metalness: 0.2,
+        roughness: 0.6,
+      });
+      child.visible = true;
+    }
+  });
+
+  // Compute bounding box
   const box = new THREE.Box3().setFromObject(model);
+  console.log("Bounding box:", box);
+
   const size = box.getSize(new THREE.Vector3());
   const center = box.getCenter(new THREE.Vector3());
 
+  // 🚨 If size is (0,0,0), your GLB is broken
+  console.log("Model size:", size);
+
   model.position.sub(center);
-  model.scale.setScalar(2 / Math.max(size.x, size.y, size.z));
+
+  const maxDim = Math.max(size.x, size.y, size.z);
+  const scale = maxDim === 0 ? 1 : 2 / maxDim;
+  model.scale.setScalar(scale);
 
   scene.add(model);
 });
