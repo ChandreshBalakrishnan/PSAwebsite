@@ -6,6 +6,10 @@ tabs.forEach(tab => {
     tabs.forEach(t => t.classList.remove("active"));
     tab.classList.add("active");
 
-    viewer.src = tab.dataset.model;
+    const newSrc = tab.dataset.model;
+
+    // Force reload
+    viewer.src = "";
+    viewer.src = newSrc;
   });
 });
