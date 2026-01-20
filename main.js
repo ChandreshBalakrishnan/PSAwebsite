@@ -1,9 +1,14 @@
-// main.js
-// Optional — you can leave this empty or add interactions later
+const tabs = document.querySelectorAll(".tab");
+const viewers = document.querySelectorAll(".viewer");
 
-const viewer = document.getElementById("viewer");
+tabs.forEach(tab => {
+  tab.addEventListener("click", () => {
+    // Remove active classes
+    tabs.forEach(t => t.classList.remove("active"));
+    viewers.forEach(v => v.classList.remove("active"));
 
-// Example: log when model is loaded
-viewer.addEventListener("load", () => {
-  console.log("3D model loaded successfully");
+    // Activate selected tab and viewer
+    tab.classList.add("active");
+    document.getElementById(tab.dataset.tab).classList.add("active");
+  });
 });
