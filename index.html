@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>CAD Project Viewer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <h1>Breadboard Button Extender</h1>
+    <p>Interactive CAD model and project documentation</p>
+  </header>
+
+  <main>
+    <section id="viewer-container">
+      <canvas id="viewer"></canvas>
+    </section>
+
+    <section id="info">
+      <h2>Project Overview</h2>
+      <p>
+        This project presents a 3D-printed button extender designed to interface
+        with breadboard-mounted tactile switches. The model below can be rotated
+        and inspected interactively.
+      </p>
+
+      <a
+        class="download-btn"
+        href="reports/project_report.pdf"
+        target="_blank"
+        download
+      >
+        📄 Download Project Report (PDF)
+      </a>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 Chandresh Balakrishnan</p>
+  </footer>
+
+  <script type="module" src="main.js"></script>
+</body>
+</html>
