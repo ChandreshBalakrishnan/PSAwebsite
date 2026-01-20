@@ -2,46 +2,37 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>CAD Project Viewer</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3D Model Viewer</title>
+
+  <!-- Google model-viewer -->
+  <script type="module"
+    src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">
+  </script>
 
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
 
   <header>
-    <h1>!CAD Model!</h1>
-    <p>Interactive CAD model and project documentation</p>
+    <h1>CAD Model Viewer</h1>
+    <p>Interactive 3D view of the prototype</p>
   </header>
 
   <main>
-    <section id="viewer-container">
-      <canvas id="viewer"></canvas>
-    </section>
-
-    <section id="info">
-      <h2>Project Overview</h2>
-      <p>
-        This project presents a 3D-printed button extender designed to interface
-        with breadboard-mounted tactile switches. The model below can be rotated
-        and inspected interactively.
-      </p>
-
-      <a
-        class="download-btn"
-        href="reports/project_report.pdf"
-        target="_blank"
-        download
-      >
-        📄 Download Project Report (PDF)
-      </a>
-    </section>
+    <model-viewer
+      id="viewer"
+      src="models/model.glb"
+      alt="3D CAD model"
+      camera-controls
+      auto-rotate
+      exposure="1"
+      shadow-intensity="1"
+      environment-image="neutral"
+      ar>
+    </model-viewer>
   </main>
 
-  <footer>
-    <p>© 2026 Chandresh Balakrishnan</p>
-  </footer>
-
-  <script type="module" src="main.js"></script>
+  <script src="main.js"></script>
 </body>
 </html>
