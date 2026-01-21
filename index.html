@@ -4,10 +4,13 @@
   <meta charset="UTF-8" />
   <title>3D Model Viewer</title>
 
-  <script type="module"
+  <!-- Google model-viewer -->
+  <script
+    type="module"
     src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">
   </script>
 
+  <!-- Styles -->
   <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -15,12 +18,26 @@
 
   <!-- Tabs -->
   <div class="tabs">
-    <button class="tab active" data-model="reports/project_report.pdf">Project Overview</button>
-    <button class="tab" data-model="models/model1.glb">Case Body</button>
-    <button class="tab" data-model="models/model2.glb">Case Floor</button>
+    <button class="tab active"
+            data-type="model"
+            data-src="models/model1.glb">
+      Model 1
+    </button>
+
+    <button class="tab"
+            data-type="model"
+            data-src="models/model2.glb">
+      Model 2
+    </button>
+
+    <button class="tab"
+            data-type="pdf"
+            data-src="reports/project_report.pdf">
+      Report
+    </button>
   </div>
 
-  <!-- Single Viewer -->
+  <!-- 3D Model Viewer -->
   <model-viewer
     id="viewer"
     src="models/model1.glb"
@@ -30,13 +47,15 @@
     background-color="#111">
   </model-viewer>
 
-  
+  <!-- PDF Viewer -->
   <embed
     id="pdf-viewer"
     src=""
-    type="application/pdf"
-    style="display:none;">
+    type="application/pdf">
+  </embed>
 
+  <!-- Script -->
   <script src="main.js"></script>
+
 </body>
 </html>
