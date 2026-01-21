@@ -8,8 +8,10 @@ tabs.forEach(tab => {
 
     const newSrc = tab.dataset.model;
 
-    // Force reload
-    viewer.src = "";
-    viewer.src = newSrc;
+    // HARD reload to defeat caching
+    viewer.removeAttribute("src");
+    setTimeout(() => {
+      viewer.setAttribute("src", newSrc);
+    }, 50);
   });
 });
