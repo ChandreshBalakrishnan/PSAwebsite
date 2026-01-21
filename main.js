@@ -1,4 +1,5 @@
 const viewer = document.getElementById("viewer");
+const pdfViewer = document.getElementById("pdf-viewer");
 const tabs = document.querySelectorAll(".tab");
 
 tabs.forEach(tab => {
@@ -6,12 +7,23 @@ tabs.forEach(tab => {
     tabs.forEach(t => t.classList.remove("active"));
     tab.classList.add("active");
 
-    const newSrc = tab.dataset.model;
+    const type = tab.dataset.type;
+    const src = tab.dataset.src;
 
-    // HARD reload to defeat caching
-    viewer.removeAttribute("src");
-    setTimeout(() => {
-      viewer.setAttribute("src", newSrc);
-    }, 50);
+    if (type === "model") {
+      pdfViewer.style.display = "none";
+      viewer.style.display = "block";
+
+      viewer.removeAttribute("src");
+      setTimeout(() => {
+        viewer.setAttribute("src", src);
+      }, 50);
+    }
+
+    if (type === "pdf") {
+      viewer.style.display = "none";
+      pdfViewer.style.display = "block";
+      pdfViewer.src = src;
+    }
   });
 });
