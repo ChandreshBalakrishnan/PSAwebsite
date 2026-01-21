@@ -15,10 +15,25 @@
 
   <!-- Tabs -->
   <div class="tabs">
-    <button class="tab" data-model="models/model1.glb">Project Overview</button>
-    <button class="tab" data-model="models/model1.glb">Case Body</button>
-    <button class="tab" data-model="models/model2.glb">Case Floor</button>
-  </div>
+  <button class="tab active"
+          data-type="model"
+          data-src="models/model1.glb">
+    Project Overview
+  </button>
+
+  <button class="tab"
+          data-type="model"
+          data-src="models/model1.glb">
+    Case Body
+  </button>
+
+  <button class="tab"
+          data-type="model"
+          data-src="models/model2.glb">
+    Case Floor
+  </button>
+</div>
+
 
   <!-- Single Viewer -->
   <model-viewer
