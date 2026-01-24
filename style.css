@@ -31,3 +31,33 @@ body {
     width: 100vw;
     height: calc(100vh - 52px);
   }
+
+/* Report pages */
+.report {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 24px 80px;
+  line-height: 1.7;
+}
+
+.report h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.report h2 {
+  margin-top: 40px;
+  margin-bottom: 12px;
+  color: #4fa3ff;
+}
+
+.report p {
+  margin-bottom: 18px;
+  color: #ddd;
+}
+
+/* Make links look like tabs */
+.tab {
+  text-decoration: none;
+}
+
