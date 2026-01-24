@@ -61,3 +61,10 @@ model-viewer {
   margin-bottom: 18px;
   color: #ddd;
 }
+
+/* Sub-tabs for model selection */
+.sub-tabs {
+  background: #141414;
+  border-bottom: 1px solid #222;
+}
+
