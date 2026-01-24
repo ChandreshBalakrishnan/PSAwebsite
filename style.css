@@ -62,11 +62,16 @@ model-viewer {
   color: #ddd;
 }
 
-/* Sub-tabs for model selection */
 .sub-tabs {
   background: #141414;
   border-bottom: 1px solid #222;
 }
+
+.sub-tabs .tab {
+  font-size: 14px;
+  padding: 10px 18px;
+}
+
 
 /* Media (images & videos) */
 .media {
