@@ -1,38 +1,44 @@
+/* Global */
 body {
-    margin: 0;
-    background: #111;
-    color: white;
-    font-family: Arial, sans-serif;
-  }
-  
-  /* Tabs */
-  .tabs {
-    display: flex;
-    justify-content: center;
-    background: #1a1a1a;
-  }
-  
-  .tab {
-    padding: 14px 24px;
-    border: none;
-    background: none;
-    color: #aaa;
-    cursor: pointer;
-    font-size: 16px;
-  }
-  
-  .tab.active {
-    color: white;
-    border-bottom: 2px solid #4fa3ff;
-  }
-  
-  /* Viewer */
-  model-viewer {
-    width: 100vw;
-    height: calc(100vh - 52px);
-  }
+  margin: 0;
+  background: #111;
+  color: white;
+  font-family: Arial, sans-serif;
+}
 
-/* Report pages */
+/* Tabs */
+.tabs {
+  display: flex;
+  justify-content: center;
+  background: #1a1a1a;
+}
+
+.tab {
+  padding: 14px 24px;
+  background: none;
+  border: none;
+  color: #aaa;
+  cursor: pointer;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.tab:hover {
+  color: white;
+}
+
+.tab.active {
+  color: white;
+  border-bottom: 2px solid #4fa3ff;
+}
+
+/* 3D Viewer */
+model-viewer {
+  width: 100vw;
+  height: calc(100vh - 52px);
+}
+
+/* Report Pages */
 .report {
   max-width: 900px;
   margin: 40px auto;
@@ -55,9 +61,3 @@ body {
   margin-bottom: 18px;
   color: #ddd;
 }
-
-/* Make links look like tabs */
-.tab {
-  text-decoration: none;
-}
-
