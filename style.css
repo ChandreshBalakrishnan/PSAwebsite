@@ -68,3 +68,45 @@ model-viewer {
   border-bottom: 1px solid #222;
 }
 
+/* Media (images & videos) */
+.media {
+  display: block;
+  max-width: 100%;
+  margin: 32px auto;
+  border-radius: 8px;
+}
+
+/* Figure + caption */
+.media-figure {
+  margin: 40px 0;
+  text-align: center;
+}
+
+.media-figure img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+.media-figure figcaption {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #aaa;
+}
+
+/* Responsive video embeds */
+.video-embed {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+  margin: 40px 0;
+}
+
+.video-embed iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border-radius: 8px;
+}
+
