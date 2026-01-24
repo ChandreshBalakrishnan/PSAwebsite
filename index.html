@@ -4,7 +4,6 @@
   <meta charset="UTF-8" />
   <title>3D Model Viewer</title>
 
-  <!-- Google Model Viewer -->
   <script
     type="module"
     src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">
@@ -15,17 +14,26 @@
 
 <body>
 
-  <!-- Tabs -->
+  <!-- PAGE NAVIGATION -->
   <div class="tabs">
     <a class="tab active" href="index.html">3D Viewer</a>
     <a class="tab" href="report-overview.html">Project Overview</a>
-    <a class="tab" href="prototypedesign.html">Prototype Design</a>
-    <a class="tab" href="build.html">Build</a>
-    <a class="tab" href="integration.html">Integration</a>
-    <a class="tab" href="verification.html">Verification</a>
+    <a class="tab" href="report-body.html">Prototype Design</a>
+    <a class="tab" href="report-floor.html">Body</a>
+    <a class="tab" href="report-analysis.html">Analysis</a>
+    <a class="tab" href="report-conclusion.html">Conclusion</a>
   </div>
 
-  <!-- Model Viewer -->
+  <!-- MODEL SELECTOR -->
+  <div class="tabs sub-tabs">
+    <button class="tab active" data-model="models/model1.glb">
+      Model 1
+    </button>
+    <button class="tab" data-model="models/model2.glb">
+      Model 2
+    </button>
+  </div>
+
   <model-viewer
     id="viewer"
     src="models/model1.glb"
