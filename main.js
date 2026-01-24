@@ -1,5 +1,5 @@
 const viewer = document.getElementById("viewer");
-const tabs = document.querySelectorAll(".tab");
+const tabs = document.querySelectorAll(".tab[data-model]");
 
 tabs.forEach(tab => {
   tab.addEventListener("click", () => {
@@ -8,7 +8,7 @@ tabs.forEach(tab => {
 
     const newSrc = tab.dataset.model;
 
-    // HARD reload to defeat caching
+    // Force reload to avoid caching
     viewer.removeAttribute("src");
     setTimeout(() => {
       viewer.setAttribute("src", newSrc);
