@@ -13,15 +13,15 @@
 
 <body>
 
-  <!-- Tabs -->
-<div class="tabs">
-  <button class="tab" data-model="overview.html">Project Overview</button>
-  <button class="tab" data-model="models/model1.glb">Case Body</button>
-  <button class="tab" data-model="models/model2.glb">Case Floor</button>
-</div>
+  <div class="tabs">
+    <a class="tab active" href="index.html">3D Viewer</a>
+    <a class="tab" href="report-overview.html">Overview</a>
+    <a class="tab" href="report-body.html">Case Body</a>
+    <a class="tab" href="report-floor.html">Case Floor</a>
+    <a class="tab" href="report-analysis.html">Analysis</a>
+    <a class="tab" href="report-conclusion.html">Conclusion</a>
+  </div>
 
-
-  <!-- Single Viewer -->
   <model-viewer
     id="viewer"
     src="models/model1.glb"
