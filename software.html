@@ -35,7 +35,7 @@
     </p>
 
     <pre class="code-block"><code>
-    '''
+'''
 PSA CircuitPython code
 One button cycles between the number of LEDs that will be on
 One button shuts off all the LEDs to turn them all off
@@ -109,6 +109,187 @@ while True:
             red.value = True
         # allows sleep time to eliminate button bouncing 
         while not cycle.value: 
+            time.sleep(0.01)
+        time.sleep(0.05)     
+    
+    time.sleep(0.01)
+            
+    </code></pre>
+
+     <pre class="code-block"><code>
+'''
+PSA CircuitPython code
+One button, two_light_buttons, turns on the Red and Blue LEDs if all LEDs are currently off
+One button three_light_buttons, turns on all the LEDs if all LEDs are currently off.
+If any LEDs are on, either button turns them all off
+This implementation of the PSA CircuitPython code ensures you can reach any other state from the OFF state, 
+but has the downside of not being able to go from the 2LED to the 3LED state and vice-versa in a single button push.
+'''
+
+# import libraries needed to initialize board, LEDs, and buttons
+import board
+import digitalio
+import time
+
+# initialize the green, blue, and red LEDs with their corresponding GPIO pins
+green = digitalio.DigitalInOut(board.GP18)
+green.direction = digitalio.Direction.OUTPUT
+
+blue = digitalio.DigitalInOut(board.GP17)
+blue.direction = digitalio.Direction.OUTPUT
+
+red = digitalio.DigitalInOut(board.GP16)
+red.direction = digitalio.Direction.OUTPUT
+
+# initialize the two_light_button and three_light_button buttons with their corresponding GPIO pins
+two_light_button = digitalio.DigitalInOut(board.GP15)
+two_light_button.direction = digitalio.Direction.INPUT
+two_light_button.pull = digitalio.Pull.UP
+
+three_light_button = digitalio.DigitalInOut(board.GP14)
+three_light_button.direction = digitalio.Direction.INPUT
+three_light_button.pull = digitalio.Pull.UP 
+
+# print statement to verify code is running
+print('Hello!')
+
+# infinite loop
+while True:
+    # when both buttons are pressed, the three_light_button takes priority
+    if (not two_light_button.value and not three_light_button.value):
+        # turn all LEDs on
+        red.value = True
+        blue.value = True
+        green.value = True
+        # prevent button bouncing
+        while not two_light_button.value: 
+            time.sleep(0.01)
+        while not three_light_button.value: 
+            time.sleep(0.01)
+        time.sleep(0.05)
+    elif (not three_light_button.value):
+        # if any LEDs are on, turn them all off
+        if(red.value == True or blue.value == True or green.value == True):
+            green.value = False
+            blue.value = False
+            red.value = False
+        else:
+            # else, turn all LEDs on
+            red.value = True
+            blue.value = True
+            green.value = True
+        # prevent button bouncing
+        while not three_light_button.value: 
+            time.sleep(0.01)
+        time.sleep(0.05)
+    
+    elif (not two_light_button.value):
+        # if any LEDs on, turn them all off
+        if(red.value == True or blue.value == True or green.value == True):
+            green.value = False
+            blue.value = False
+            red.value = False
+        else:
+            # turn red and blue LEDs on
+            red.value = True
+            blue.value = True
+            green.value = False
+        # prevent button bouncing
+        while not two_light_button.value: 
+            time.sleep(0.01)
+        time.sleep(0.05)
+
+    time.sleep(0.01)
+            
+    </code></pre>
+
+     <pre class="code-block"><code>
+'''
+PSA CircuitPython code
+One button cycles forward between the states, OFF, 1LED, 2LED.
+The other button cycles backward between the states.
+This implementation of the PSA CircuitPython code takes advantage of 2 buttons,
+ensuring that every state can be reached with a single button press.
+'''
+
+# import libraries needed to initialize board, LEDs, and buttons
+import board
+import digitalio
+import time
+
+# initialize a cycle counter to cycle between the LED modes
+cycle_counter = 0
+
+# initialize the green, blue, and red LEDs with their corresponding GPIO pins
+green = digitalio.DigitalInOut(board.GP17)
+green.direction = digitalio.Direction.OUTPUT
+
+blue = digitalio.DigitalInOut(board.GP21)
+blue.direction = digitalio.Direction.OUTPUT
+
+red = digitalio.DigitalInOut(board.GP18)
+red.direction = digitalio.Direction.OUTPUT
+
+# initialize the reverse and forward buttons with their corresponding GPIO pins
+reverse = digitalio.DigitalInOut(board.GP15)
+reverse.direction = digitalio.Direction.INPUT
+reverse.pull = digitalio.Pull.UP
+
+forward = digitalio.DigitalInOut(board.GP14)
+forward.direction = digitalio.Direction.INPUT
+forward.pull = digitalio.Pull.UP 
+
+# print statement to verify code is running
+print('Hello!')
+
+# infinite loop
+while True:
+    # when reverse button is pressed
+    if (not reverse.value):
+        if(cycle_counter != 0):
+            cycle_counter = cycle_counter - 1
+            if(cycle_counter == 1):
+                red.value = True
+                blue.value = True
+                green.value = False
+            # turn red, blue, and green on (PLANTS & PEOPLE)
+            elif(cycle_counter == 0):
+                red.value = False
+                blue.value = False
+                green.value = False
+        else:
+            # turn red, blue, and green on (PLANTS & PEOPLE)
+            cycle_counter = 2
+            green.value = True
+            blue.value = True
+            red.value = True
+            
+        # allows sleep time to eliminate button bouncing 
+        while not reverse.value: 
+            time.sleep(0.01)
+        time.sleep(0.05)
+    
+    # when forward button is pressed
+    elif (not forward.value):
+        if(cycle_counter != 2):
+            cycle_counter = cycle_counter + 1
+            # turn red and blue on (PLANTS ONLY)
+            if(cycle_counter == 1):
+                red.value = True
+                blue.value = True
+                green.value = False
+            # turn red, blue, and green on (PLANTS & PEOPLE)
+            elif(cycle_counter == 2):
+                red.value = True
+                blue.value = True
+                green.value = True
+        else:
+            cycle_counter = 0
+            green.value = False
+            blue.value = False
+            red.value = False
+        # allows sleep time to eliminate button bouncing 
+        while not forward.value: 
             time.sleep(0.01)
         time.sleep(0.05)     
     
