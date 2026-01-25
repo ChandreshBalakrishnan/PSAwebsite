@@ -35,7 +35,7 @@ body {
 /* 3D Viewer */
 model-viewer {
   width: 100vw;
-  height: calc(100vh - 100px);
+  height: calc(100vh - 52px);
 }
 
 /* Report Pages */
