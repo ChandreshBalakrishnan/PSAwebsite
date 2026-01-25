@@ -173,3 +173,24 @@ model-viewer {
                "Courier New", monospace;
 }
 
+.download-section {
+  text-align: center;
+  margin: 24px 0 40px;
+}
+
+.download-btn {
+  display: inline-block;
+  padding: 12px 22px;
+  background: #4fa3ff;
+  color: #000;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.download-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(79,163,255,0.35);
+}
+
