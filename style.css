@@ -92,11 +92,14 @@ model-viewer {
   border-radius: 8px;
 }
 
+.media,
 .media-figure video {
   width: 100%;
-  max-width: 100%;
   height: auto;
+  display: block;
+  border-radius: 8px;
 }
+
 
 
 .media-figure figcaption {
