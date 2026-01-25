@@ -20,13 +20,13 @@
 
 
   <main class="report">
-    <h1>Prototype System Overview (Folder 04_Prototype)</h1>
+    <h1 style="text-align:center;">Prototype System Overview (Folder 04_Prototype)</h1>
 
     <p>
       This prototype exemplifies a single module of an embedded greenhouse lighting system designed to change light color in response to user input. The system integrates a software control subsystem responsible for managing system behavior (Section 2), an electrical subsystem that interfaces user inputs and LED outputs (Section 3), and a digitally fabricated structural enclosure that houses and protects the system components (Section 4). The prototype was developed in accordance with the defined specifications and design constraints. System performance was evaluated against the specifications using a structured verification framework, as documented in Section 6.
     </p>
 
-    <h1>Software Subsystem (Folder 04.2.2_Software)</h1>
+    <h1 style="text-align:center;">Software Subsystem (Folder 04.2.2_Software)</h1>
 
     <p>
       The software subsystem is implemented in CircuitPython on the Raspberry Pi Pico and realizes the system’s control logic based on a finite state machine (FSM) model, shown below. 
@@ -43,7 +43,7 @@
       The FSM defines three operating states: OFF (all LEDs off), PLANTS (red and blue LEDs on), and PLANTS & PEOPLE (all LEDs on). System behavior is controlled through two pushbutton inputs, Forward and Backward, which cyclically advance or reverse the system state. The Reset input indicates the system’s initial state. Folder 04.2.2_Software contains the iterative code development, including the intermediate and final code versions with their corresponding FSM representations.
     </p>
 
-    <h1>Electrical Subsystem</h1>
+    <h1 style="text-align:center;">Electrical Subsystem</h1>
     <p>
       The electrical subsystem consists of a Raspberry Pi Pico, LEDs, resistors, and two pushbuttons on a breadboard. Resistors were selected to prevent LED damage, cross-referencing Lab 2 and observation of brightness through trials. The final circuitry design was selected to minimize the use of wires, and keep LEDs centered design for cleanliness, aesthetics, and reproducibility.
     </p>
@@ -55,7 +55,7 @@
       </figcaption>
     </figure>
 
-    <h1>Structural Subsystem</h1>
+    <h1 style="text-align:center;">Structural Subsystem</h1>
     <p>
       The final structural subsystem consists of a digitally fabricated enclosure designed to protect the electrical components and improve aesthetic appeal. PLA was selected due to MYFab fabrication constraints. The enclosure design prioritized accessibility to the pushbutton and USB port while minimizing material usage and print time. Screws were used to secure the enclosure to design for durability. Further iterations can be found in Folder 04.2.2_Structural.
     </p>
