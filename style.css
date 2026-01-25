@@ -82,15 +82,21 @@ model-viewer {
 }
 
 /* Figure + caption */
+.content {
+  max-width: 700px;   /* whatever your text width is */
+  margin: 0 auto;
+}
+
 .media-figure {
-  margin: 40px 0;
-  text-align: center;
+  margin: 1.5rem 0;
 }
 
 .media-figure img {
-  max-width: 100%;
-  border-radius: 8px;
+  width: 100%;        /* SAME width as text column */
+  height: auto;
+  display: block;
 }
+
 
 .media,
 .media-figure video {
