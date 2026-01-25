@@ -142,4 +142,24 @@ model-viewer {
 .report > *:nth-child(5) { animation-delay: 0.25s; }
 .report > *:nth-child(6) { animation-delay: 0.3s; }
 
+/* =========================
+   CODE BLOCKS
+   ========================= */
+
+.code-block {
+  background: #0f1115;
+  border-radius: 8px;
+  padding: 18px 20px;
+  overflow-x: auto;
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 32px 0;
+}
+
+.code-block code {
+  color: #dcdcdc;
+  font-family: "SFMono-Regular", Menlo, Monaco,
+               Consolas, "Liberation Mono",
+               "Courier New", monospace;
+}
 
