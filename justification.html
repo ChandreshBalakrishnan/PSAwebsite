@@ -28,36 +28,24 @@
 
   <main class="report">
     <h1 style="text-align:center;">Justification</h1>
-    <p>
-      The software subsystem followed a similar diverging and converging methodology, centered on interaction logic and state accessibility. The SCAMPER analysis for software documents the evolution from simple, role-specific button behaviors toward a fully state-based control strategy.
-    </p>
-    <p>
-Divergence occurred by substituting one-directional state cycling with bidirectional navigation, replacing mode-specific logic with explicit finite state machine (FSM) modeling, and exploring different mappings between button inputs and LED modes. Combination and adaptation incorporated principles from user interface design, embedded systems modeling, and consumer electronics interaction patterns. Modifications focused on improving state reachability, symmetry, and predictability, while elimination removed dead-end states and redundant logic that limited usability.
-    </p>
-    <figure class="media-figure">
-      <img src="media/prototypedesign/softwareSCAMPER1.png" alt="softwareSCAMPER1">
-      <figcaption>
-        Figure 1
-      </figcaption>
-    </figure>
-    <figure class="media-figure">
-      <img src="media/prototypedesign/softwareSCAMPER2.png" alt="softwareSCAMPER2">
-      <figcaption>
-        Figure 2
-      </figcaption>
-    </figure>
+<p>This section provides quantitative justification and analytical support for the converged design decisions, enabling evaluation of whether the proposed design satisfies the specified requirements prior to physical construction.
+</p>
 
-    <p>
-      Convergence was achieved through a pairwise comparison of the three software prototypes, each represented by both code and an FSM. These comparisons evaluated state accessibility, user intuitiveness, and alignment with the finalized two-button electrical interface. The final software design was selected based on its ability to provide complete, symmetric state access while remaining simple to understand, document, and extend.
-    </p>
-    <figure class="media-figure">
-      <img src="media/prototypedesign/softwarePC.png" alt="softwarePC">
-      <figcaption>
-        Figure 3
-      </figcaption>
-    </figure>
+<p>
+A primary focus is the selection of LED resistor values, as these directly determine LED current and illumination intensity, a critical electrical specification (O-1.1-ELEC-1). This folder contains the mathematical analysis used to select appropriate resistance values, ensuring safe operation while achieving the desired visual output.
+</p>
 
 
+
+<p>    
+For the software subsystem, validation can be performed without constructing the physical prototype. Leveraging this advantage, extensive testing was conducted to verify that all software specifications were met, including the presence, reachability, and correctness of all system states. These tests ensured that the control logic behaves deterministically and satisfies the defined interaction requirements.
+</p>
+
+
+
+<p>    
+Finally, structural integrity was evaluated through targeted research into the properties of the chosen enclosure material, PLA. This analysis examined tensile strength, thermal deformation characteristics, and material brittleness to assess suitability for the intended application. The folder includes a detailed write-up summarizing this research and its implications for the structural design.
+</p>
     <!-- Add as much text as you want -->
   </main>
 
