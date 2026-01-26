@@ -213,7 +213,7 @@ model-viewer {
 /* General table styling */
 table {
   border-collapse: collapse; /* Remove double borders */
-  width: 80%; /* Table width */
+  width: 100%; /* Table width */
   margin: 20px auto; /* Center table */
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
   font-family: Arial, sans-serif;
