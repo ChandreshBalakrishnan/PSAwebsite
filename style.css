@@ -212,17 +212,16 @@ model-viewer {
 
 /* General table styling */
 table {
-  border-collapse: collapse; /* Remove double borders */
-  width: 100%; /* Table width */
-  margin: 20px auto; /* Center table */
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-  font-family: Arial, sans-serif;
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px auto;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .report2 {
-  max-width: 1200px; /* change to 750px for textbook-style width */
+  max-width: 95vw;      /* nearly full screen */
   margin: 40px auto;
-  padding: 0 24px 80px;
+  padding: 0 12px 80px;
   line-height: 1.7;
 }
 
