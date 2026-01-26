@@ -330,7 +330,7 @@ Metric: PASS/FAIL.</td>
 
 <main class="report">
   <figure class="media-figure">
-      <img src="media/verification/O-1.2-SOFT-1" alt="O-1.2-SOFT-1">
+      <img src="media/verification/O-1.2-SOFT-1.jpg" alt="O-1.2-SOFT-1">
       <figcaption>
         Figure O-1.2-SOFT-1
       </figcaption>
@@ -355,11 +355,54 @@ Metric: PASS/FAIL.</td>
 
 <main class="report">
   <figure class="media-figure">
-      <img src="media/verification/O-2.1-SOFT-1" alt="O-2.1-SOFT-1">
+      <img src="media/verification/O-2.1-SOFT-1.jpg" alt="O-2.1-SOFT-1">
       <figcaption>
         Figure O-2.1-SOFT-1
       </figcaption>
     </figure>
+</main>
+
+  <main class="report2">
+    <table>
+      <tbody>
+        <tr>
+          <td>O-3.1-SOFT-1</td>
+          <td>The LED state shall not change unless a user presses a button.</td>
+          <td>Test</td>
+          <td>Operate the fully assembled prototype for a continuous period of 60 seconds without pressing any control buttons while observing the LED state. Repeat this test three times. During each trial, apply mild mechanical disturbances (e.g., lifting or gently shaking the device) and verify that the LED state remains unchanged throughout each observation interval. 
+Metric: PASS/FAIL.</td>
+          <td>Three test trials are documented in videos O-3.1-SOFT-1-1.MOV, O-3.1-SOFT-1-2.MOV, and O-3.1-SOFT-1-3.MOV. In each video, the fully assembled prototype is shown connected to a laptop, with the power cable, microcontroller, and executing code visible throughout the recording, confirming continuous operation. At the start and end of each trial, the LED states are intentionally cycled using button presses to verify that the system is powered and responsive. During each 60-second observation interval, no control buttons are pressed; at approximately the 20-second mark of each trial, the prototype is subjected to mild mechanical disturbances as specified. In all trials, the LED state remains unchanged in the absence of button input. The requirement is satisfied. PASS.</td>
+          <td>Mechanical disturbances were included during testing to verify robustness against unintended state changes due to accidental button presses induced by the structural subsystem.</td>
+        </tr>
+      </tbody>
+    </table>
+  </main>
+
+<main class="report">
+  <figure class="video-figure">
+    <video controls>
+      <source src="media/verification/O-3.1-SOFT-1-1.mp4" type="video/mp4">
+    </video>
+    <figcaption>
+      Video O-3.1-SOFT-1-1
+    </figcaption>
+  </figure>
+    <figure class="video-figure">
+    <video controls>
+      <source src="media/verification/O-3.1-SOFT-1-2.mp4" type="video/mp4">
+    </video>
+    <figcaption>
+      Video O-3.1-SOFT-1-2
+    </figcaption>
+  </figure>
+    <figure class="video-figure">
+    <video controls>
+      <source src="media/verification/O-3.1-SOFT-1-3.mp4" type="video/mp4">
+    </video>
+    <figcaption>
+      Video O-3.1-SOFT-1-3
+    </figcaption>
+  </figure>
 </main>
   
 </body>
