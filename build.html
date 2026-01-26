@@ -32,7 +32,7 @@
     </button>
   </div>
 
-
+  
 
   <main class="report">
     <h1 style="text-align:center;">Build Process Overview</h1>
@@ -43,6 +43,18 @@ This section presents the iterative evolution of the system across its electrica
 
 
     <!-- Add as much text as you want -->
+    <model-viewer
+    id="viewer"
+    src="models/model1.glb"
+    camera-controls
+    auto-rotate
+    disable-zoom
+    shadow-intensity="1"
+    background-color="#111"
+    material-color="#ff0000">
+  </model-viewer>
+
+  <script src="main.js"></script>
   </main>
 
 </body>
