@@ -254,10 +254,9 @@ table {
 }
 
 .video-figure video {
-  width: 100%;
+   width: 100%;
   height: auto;
   display: block;
-  border-radius: 8px;
 }
 
 .video-figure figcaption {
