@@ -59,8 +59,28 @@ section_view_button.png shows a section view CAD screenshot of this proposed mec
         Figure section_view_button
       </figcaption>
     </figure>
-    
 
+    <p>
+      This mechanism did not function as intended, primarily because the PLA material was significantly stiffer than anticipated. As a result, the button extension did not deform sufficiently
+under applied force to reliably actuate the button. To debug this issue, the button extenders were
+separated from the enclosure and instead attached directly to the buttons themselves.
+    </p>
+    
+  <p>
+    In future iterations, this issue could be avoided by printing the button caps as separate components from the outset and attaching them during assembly. Alternatively, the button interface
+could be redesigned such that the printed button extension is not mechanically attached to the
+enclosure at all. In this approach, a small clearance gap would be maintained between the button
+extension and the surrounding case walls, allowing the extension to rest freely above the button and
+transmit force through direct contact rather than elastic deformation. This would reduce reliance on material flexibility while preserving consistent button actuation.
+  </p>
+
+    <p>
+      The file buttoncap_glue.mov documents the process of gluing the button cap directly onto the
+button. The decision to use adhesive bonding was informed by discussions with MyFab staff, who
+advised that glue would provide a more reliable attachment method than tapes such as Scotch
+or duct tape. This approach was deemed acceptable given that the buttons were final-sale components, eliminating concerns about potential damage to shared or reusable parts. The file circuit_building_with_buttoncap.mov shows the subsequent rebuilding of the circuit with the modified
+button assemblies.
+    </p>
 
     <!-- Add as much text as you want -->
   </main>
