@@ -4,10 +4,6 @@
   <link rel="icon" type="image/png" href="favicon.png">
   <meta charset="UTF-8" />
   <title>PSA-0108-01</title>
-  <script
-    type="module"
-    src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">
-  </script>
   <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -28,12 +24,13 @@
     <a class="tab" href="software.html">Software</a>
     <a class="tab active" href="structural.html">Structural</a>
     <a class="tab" href="purchaseorders.html">PurchaseOrders</a>
-    <button class="tab" type="button" data-model="models/model1.glb">
+    <a class="tab" href="model-viewer.html?model=models/model1.glb">
       BreadboardCase_v1
-    </button>
-    <button class="tab" type="button" data-model="models/model2.glb">
+    </a>
+
+    <a class="tab" href="model-viewer.html?model=models/model2.glb">
       BreadboardCase_v2
-    </button>
+    </a>
   </div>
 
 
@@ -180,19 +177,5 @@ The second CAD and CAM model pair represents an evolved version of the same desi
   
     <!-- Add as much text as you want -->
   </main>
-<div id="model-container" class="hidden">
-  <model-viewer
-    id="viewer"
-    src="models/model1.glb"
-    camera-controls
-    auto-rotate
-    disable-zoom
-    shadow-intensity="1"
-    background-color="#111"
-    material-color="#ff0000">
-  </model-viewer>
-</div>
-
-  <script src="main.js"></script>
 </body>
 </html>
