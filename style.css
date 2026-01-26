@@ -222,7 +222,7 @@ table {
 .table-wrapper {
   margin: 0 auto;        /* center table */
   padding: 0 0px;       /* increase left/right margins */
-  max-width: 1000px;     /* optional max width */
+  max-width: 1200px;     /* optional max width */
 }
 
 
