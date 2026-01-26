@@ -273,6 +273,21 @@ table td {
   vertical-align: top;
 }
 
+#model-container {
+  position: fixed;
+  inset: 0;
+  background: #111;
+  z-index: 10;
+}
+
+#model-container model-viewer {
+  width: 100%;
+  height: 100%;
+}
+
+.hidden {
+  display: none;
+}
 
 
 
