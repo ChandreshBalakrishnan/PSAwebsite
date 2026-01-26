@@ -248,5 +248,25 @@ table {
 .report2 > *:nth-child(5) { animation-delay: 0.25s; }
 .report2 > *:nth-child(6) { animation-delay: 0.3s; }
 
+.video-figure {
+  max-width: 900px;      /* match .report width */
+  margin: 40px auto;
+}
+
+.video-figure video {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+
+.video-figure figcaption {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 14px;
+  color: #aaa;
+}
+
+
 
 
