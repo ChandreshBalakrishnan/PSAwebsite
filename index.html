@@ -55,8 +55,28 @@ informing the final control architecture are doc-
 umented in Folder 04.2.2_Software.
     </p>
 
+    <h1 style="text-align:center;">Electrical Subsystem</h1>
+
     <p>
-      The FSM defines three operating states: OFF (all LEDs off), PLANTS (red and blue LEDs on), and PLANTS & PEOPLE (all LEDs on). System behavior is controlled through two pushbutton inputs, Forward and Backward, which cyclically advance or reverse the system state. The Reset input indicates the system’s initial state. Folder 04.2.2_Software contains the iterative code development, including the intermediate and final code versions with their corresponding FSM representations.
+      The electrical subsystem provides the interface
+between the software control logic and the phys-
+ical system. It is shown in Figure 2:
+    </p>
+    <figure class="media-figure">
+      <img src="media/purchaseorders/v1.png" alt="3DPrintOrderv1">
+      <figcaption>
+        Figure 2: Breadboard layout of the electrical subsystem showing the various components.
+      </figcaption>
+    </figure>
+
+    <p>
+      Resistor values of 220 Ω, 1000 Ω, and 330 Ω were
+selected for the red, blue, and green LEDs re-
+spectively to prevent LED damage and achieve
+balanced perceived brightness, with final adjust-
+ments informed during integration. The final cir-
+cuit layout was refined through multiple itera-
+tions, documented in Folder 04.2.1_Electrical.
     </p>
 
     <h1 style="text-align:center;">Electrical Subsystem</h1>
