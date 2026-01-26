@@ -254,3 +254,10 @@ table tr:hover {
   background-color: #ddd;
   cursor: pointer;
 }
+
+.table-wrapper {
+  margin: 0 auto;        /* center table */
+  padding: 0 50px;       /* increase left/right margins */
+  max-width: 1000px;     /* optional max width */
+}
+
