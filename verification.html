@@ -404,6 +404,55 @@ Metric: PASS/FAIL.</td>
     </figcaption>
   </figure>
 </main>
+
+  <main class="report2">
+    <table>
+      <tbody>
+        <tr>
+          <td>O-3.1-SOFT-3</td>
+          <td>There shall be no states achieved by the LEDs other than the 'OFF', 'PLANTS ONLY', and 'PLANTS&PEOPLE' states described in O-1.1-SOFT-1, O-1.2-SOFT-1,  and O-2.1-SOFT-1 regardless of user input. </td>
+          <td>Test</td>
+          <td>Execute a structured set of button interaction sequences on the fully assembled prototype while observing the LED outputs. From each operating state (OFF, PLANTS ONLY, PLANTS & PEOPLE), perform the following five input actions:
+• Single press of the Forward button
+• Single press of the Backward button
+• Press-and-hold of the Forward button for 2 s
+• Press-and-hold of the Backward button for 2 s
+• Press-and-hold of both buttons simultaneously for 2 s
+This results in a total of 15 test interactions (5 inputs × 3 states). Repeat procedure three times. Verify that, for all tested interactions, the LEDs only assume the OFF, PLANTS ONLY, and PLANTS & PEOPLE states, and that no other LED combinations occur at any time.
+Metric: PASS/FAIL</td>
+          <td>This test is documented in videos O-3.1-SOFT-3-1.mov, O-3.1-SOFT-3-2.mov, and O-3.1-SOFT-3-3.mov. In each video, the predefined set of five button interactions is executed from each operating state (OFF, PLANTS ONLY, and PLANTS & PEOPLE), resulting in 15 interactions per trial. The full test sequence is repeated three times. Across all trials, the LED outputs are observed continuously. For every tested interaction, the LEDs only assume the defined OFF, PLANTS ONLY, and PLANTS & PEOPLE states. No unintended LED combinations or undefined states are observed at any point during testing. The requirement is satisfied. PASS.</td>
+          <td>N/A</td>
+        </tr>
+      </tbody>
+    </table>
+  </main>
+
+<main class="report">
+  <figure class="video-figure">
+    <video controls>
+      <source src="media/verification/O-3.1-SOFT-3-1.mp4" type="video/mp4">
+    </video>
+    <figcaption>
+      Video O-3.1-SOFT-3-1
+    </figcaption>
+  </figure>
+    <figure class="video-figure">
+    <video controls>
+      <source src="media/verification/O-3.1-SOFT-3-2.mp4" type="video/mp4">
+    </video>
+    <figcaption>
+      Video O-3.1-SOFT-3-2
+    </figcaption>
+  </figure>
+    <figure class="video-figure">
+    <video controls>
+      <source src="media/verification/O-3.1-SOFT-3-3.mp4" type="video/mp4">
+    </video>
+    <figcaption>
+      Video O-3.1-SOFT-3-3
+    </figcaption>
+  </figure>
+</main>
   
 </body>
 </html>
