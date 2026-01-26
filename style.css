@@ -219,45 +219,4 @@ table {
   font-family: Arial, sans-serif;
 }
 
-/* Table caption styling */
-table caption {
-  caption-side: top;
-  font-size: 1.5em;
-  margin-bottom: 10px;
-  font-weight: bold;
-  text-align: center;
-}
-
-/* Header cells */
-table th {
-  background-color: #4CAF50; /* Green header */
-  color: white;
-  font-weight: bold;
-  padding: 12px 15px;
-  text-align: center;
-}
-
-/* Data cells */
-table td {
-  padding: 12px 15px;
-  text-align: center;
-  border-bottom: 1px solid #ddd; /* Light line between rows */
-}
-
-/* Zebra striping for rows */
-table tr:nth-child(even) {
-  background-color: #f2f2f2;
-}
-
-/* Hover effect */
-table tr:hover {
-  background-color: #ddd;
-  cursor: pointer;
-}
-
-.table-wrapper {
-  margin: 0 auto;        /* center table */
-  padding: 0 50px;       /* increase left/right margins */
-  max-width: 1000px;     /* optional max width */
-}
 
