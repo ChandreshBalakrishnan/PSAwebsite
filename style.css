@@ -267,6 +267,13 @@ table {
   color: #aaa;
 }
 
+/* Table cell spacing */
+table th,
+table td {
+  padding: 16px 24px;
+  vertical-align: top;
+}
+
 
 
 
