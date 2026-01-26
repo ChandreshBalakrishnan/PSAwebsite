@@ -223,6 +223,7 @@ table {
   margin: 0 auto;        /* center table */
   padding: 0 0px;       /* increase left/right margins */
   max-width: 1200px;     /* optional max width */
+  line-height: 1.7;
 }
 
 
