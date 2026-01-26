@@ -227,7 +227,7 @@ table {
 }
 
 .report2 {
-  max-width: 900px; /* change to 750px for textbook-style width */
+  max-width: 1200px; /* change to 750px for textbook-style width */
   margin: 40px auto;
   padding: 0 24px 80px;
   line-height: 1.7;
