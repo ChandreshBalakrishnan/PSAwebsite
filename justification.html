@@ -1,1 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" type="image/png" href="favicon.png">
+  <meta charset="UTF-8" />
+  <title>PSA-0108-01</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
 
+<body>
+
+  <div class="tabs">
+    <a class="tab" href="index.html">Project Overview</a>
+    <a class="tab active" href="prototypedesign.html">Prototype Design</a>
+    <a class="tab" href="build.html">Build</a>
+    <a class="tab" href="integration.html">Integration</a>
+    <a class="tab" href="verification.html">Verification</a>
+    <a class="tab" href="downloads.html">Downloads</a>
+  </div>
+
+  <div class="tabs sub-tabs">
+    <a class="tab" href="inielectrical.html">Electrical</a>
+    <a class="tab active" href="inisoftware.html">Software</a>
+    <a class="tab" href="inistructural.html">Structural</a>
+    <a class="tab" href="inistructural.html">Justification</a>
+  </div>
+
+
+  <main class="report">
+    <h1 style="text-align:center;">Software Diverging and Converging</h1>
+    <p>
+      The software subsystem followed a similar diverging and converging methodology, centered on interaction logic and state accessibility. The SCAMPER analysis for software documents the evolution from simple, role-specific button behaviors toward a fully state-based control strategy.
+    </p>
+    <p>
+Divergence occurred by substituting one-directional state cycling with bidirectional navigation, replacing mode-specific logic with explicit finite state machine (FSM) modeling, and exploring different mappings between button inputs and LED modes. Combination and adaptation incorporated principles from user interface design, embedded systems modeling, and consumer electronics interaction patterns. Modifications focused on improving state reachability, symmetry, and predictability, while elimination removed dead-end states and redundant logic that limited usability.
+    </p>
+    <figure class="media-figure">
+      <img src="media/prototypedesign/softwareSCAMPER1.png" alt="softwareSCAMPER1">
+      <figcaption>
+        Figure 1
+      </figcaption>
+    </figure>
+    <figure class="media-figure">
+      <img src="media/prototypedesign/softwareSCAMPER2.png" alt="softwareSCAMPER2">
+      <figcaption>
+        Figure 2
+      </figcaption>
+    </figure>
+
+    <p>
+      Convergence was achieved through a pairwise comparison of the three software prototypes, each represented by both code and an FSM. These comparisons evaluated state accessibility, user intuitiveness, and alignment with the finalized two-button electrical interface. The final software design was selected based on its ability to provide complete, symmetric state access while remaining simple to understand, document, and extend.
+    </p>
+    <figure class="media-figure">
+      <img src="media/prototypedesign/softwarePC.png" alt="softwarePC">
+      <figcaption>
+        Figure 3
+      </figcaption>
+    </figure>
+
+
+    <!-- Add as much text as you want -->
+  </main>
+
+</body>
+</html>
