@@ -13,8 +13,5 @@ tabs.forEach(tab => {
     setTimeout(() => {
       viewer.setAttribute("src", newSrc);
 
-      // 👇 ADD THIS
-      viewer.scrollIntoView({ behavior: "smooth", block: "start" });
-    }, 50);
   });
 });
