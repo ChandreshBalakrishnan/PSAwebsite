@@ -20,7 +20,7 @@
 
 
   <main class="report">
-    <h1 style="text-align:center;">Prototype System Overview (Folder 04_Prototype)</h1>
+    <h1 style="text-align:center;">Prototype System Overview</h1>
 
     <p>
       This prototype exemplifies a single module of an embedded greenhouse lighting system, modelled using the finite state machine (FSM) in Figure 1.
@@ -45,18 +45,15 @@ The <strong>Reset</strong> input indicates the system’s initial
 state.
     </p>
 
-    <h1 style="text-align:center;">Software Subsystem (Folder 04.2.2_Software)</h1>
+    <h1 style="text-align:center;">Software Subsystem</h1>
 
     <p>
-      The software subsystem is implemented in CircuitPython on the Raspberry Pi Pico and realizes the system’s control logic based on a finite state machine (FSM) model, shown below. 
+      The software subsystem implements the finite
+state machine described above using Circuit-
+Python on the Raspberry Pi Pico. Iterations
+informing the final control architecture are doc-
+umented in Folder 04.2.2_Software.
     </p>
-
-    <figure class="media-figure">
-      <img src="media/case-body.jpg" alt="Case body CAD model">
-      <figcaption>
-        Figure 1: State diagram illustrating the control logic of the LED system controlled by two buttons.
-      </figcaption>
-    </figure>
 
     <p>
       The FSM defines three operating states: OFF (all LEDs off), PLANTS (red and blue LEDs on), and PLANTS & PEOPLE (all LEDs on). System behavior is controlled through two pushbutton inputs, Forward and Backward, which cyclically advance or reverse the system state. The Reset input indicates the system’s initial state. Folder 04.2.2_Software contains the iterative code development, including the intermediate and final code versions with their corresponding FSM representations.
