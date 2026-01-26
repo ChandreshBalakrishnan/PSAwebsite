@@ -28,44 +28,32 @@
 
 
   <main class="report">
-    <h1 style="text-align:center;">Integration Process Overview</h1>
+    <h1 style="text-align:center;">Second Enclosure Iteration: Structural and Interface Refinements</h1>
     <p>
-      This folder documents the integration of the electrical, software, and structural subsystems into
-a complete Prototype System, with a focus on the challenges encountered and the iterative steps
-taken to resolve them. Integration revealed several subsystem interactions that required targeted
-
-debugging, redesign, and process-level adjustments before the system could reliably meet its in-
-tended functionality.
-
-At a structural level, integration progressed through two primary CAD designs. The initial
-
-enclosure design revealed multiple fit and accessibility issues once the electrical subsystem was in-
-stalled, including insufficient internal clearance and difficulty accessing inputs. A revised enclosure
-
-design addressed these shortcomings through dimensional adjustments and interface refinements,
-
-resulting in a structure that largely supported successful subsystem integration. However, addi-
-tional iteration was required to ensure optimal function for this enclosure too. Evidence of both
-
-versions, along with the specific changes made between them, is included in this folder.
-Electrical integration also exposed performance issues that were not apparent during isolated
-
-subsystem testing. In particular, once the system was fully assembled and moved toward verifica-
-tion, the blue LED was observed to visually overpower the green LED under combined operation.
-
-To correct this imbalance, resistor values were adjusted to better match perceived brightness across
-
-LEDs. This change is documented through observations recorded during integration and verifica-
-tion.
-
-Finally, this folder includes photos and videos of the fully integrated prototype system as built,
-demonstrating the successful coordination of all three subsystems. Together, the artifacts in this
-
-section show how early integration failures, debugging efforts, and design revisions ultimately con-
-verged into a functional prototype, while also identifying lessons that can inform future system
-
-integration efforts.
+      Clearances in the revised enclosure model were increased to improve ease of both disassembly and
+reassembly. In this iteration, the alignment divots were removed entirely, as they required an
+unnecessary level of dimensional precision while providing minimal functional benefit. However,
+eliminating the divots necessitated an alternative method for constraining the breadboard in order
+to satisfy specification O-4.2-STRU-1.
     </p>
+
+    <p>
+      Vertical movement of the breadboard was constrained using tape, while horizontal motion was
+effectively prevented by the enclosure geometry itself; the simple rectangular cavity provided sufficient lateral confinement without additional features. This approach reduced assembly complexity
+while maintaining adequate positional stability during operation.
+    </p>
+
+    <p>
+      Additionally, a new button actuation mechanism was introduced to eliminate the previously
+problematic structural wall that had interfered with internal components. This design employs
+a flexible button extension mechanism that allows the button to be actuated from a range of
+heights. Conceptually, a slender vertical tube extends downward from the enclosure surface and
+is thinly attached to the surrounding structure. The attachment is sufficiently flexible to allow
+bending under finger pressure, enabling reliable button actuation without fracture. The image
+section_view_button.png shows a section view CAD screenshot of this proposed mechanism.
+    </p>
+
+    
 
 
     <!-- Add as much text as you want -->
