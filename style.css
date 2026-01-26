@@ -219,13 +219,6 @@ table {
   font-family: Arial, sans-serif;
 }
 
-.table-wrapper {
-  margin: 0 auto;        /* center table */
-  padding: 0 0px;       /* increase left/right margins */
-  max-width: 1200px;     /* optional max width */
-  line-height: 1.7;
-}
-
 .report2 {
   max-width: 1200px; /* change to 750px for textbook-style width */
   margin: 40px auto;
