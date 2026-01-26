@@ -47,7 +47,7 @@
       BreadboardCase_v2 3D Model
     </a>
   </div>
-
+<main class="report">
   <model-viewer
     id="viewer"
     camera-controls
@@ -55,7 +55,7 @@
     shadow-intensity="1"
     background-color="#111">
   </model-viewer>
-
+</main>
   <script>
     const params = new URLSearchParams(window.location.search);
     const model = params.get("model");
@@ -64,6 +64,5 @@
       document.getElementById("viewer").src = model;
     }
   </script>
-
 </body>
 </html>
